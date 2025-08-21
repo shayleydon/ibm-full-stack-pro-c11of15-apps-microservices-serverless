@@ -5,7 +5,6 @@ git submodule add git@github.com:shayleydon/c11m5-finalproject-microservices-ser
 
 git clone --recurse-submodules -j8 git@github.com:shayleydon/ibm-full-stack-pro-c11of15-apps-microservices-serverless.git
 
-
 Updating a Submodule in Git
 Last Updated : 24 May, 2024
 
@@ -107,4 +106,97 @@ git push origin main
 
 Conclusion
 
-Updating a submodule in Git involves several steps, but it’s a simple process once you understand the workflow. By following the steps in this article, you can keep your submodules up to date, ensuring your project dependencies are current and your codebase remains stable. 
+Updating a submodule in Git involves several steps, but it’s a simple process once you understand the workflow. By following the steps in this article, you can keep your submodules up to date, ensuring your project dependencies are current and your codebase remains stable.
+
+
+How to Update Git Submodule To Latest Commit On Origin?
+Last Updated : 19 Jun, 2024
+
+Git submodules are an essential feature for incorporating external repositories into your own project. However, keeping submodules up-to-date with their respective upstream repositories can sometimes be challenging. This guide will detail the steps to update a Git submodule to the latest commit on its origin repository.
+
+Table of Content
+
+    Steps to Update
+    Updating Specific Submodules
+    Best Practices for Managing Submodules
+    Conclusion
+
+Steps to Update
+Step 1: Navigate to the Parent Repository
+
+Open Terminal or Command Prompt: Navigate to the directory of your parent repository where the submodule is located.
+Step 2: Verify Submodule Status
+
+Check Submodule Status: Execute the following command to see the current status of the submodule.
+
+git submodule status
+
+Note Submodule Path: Take note of the submodule's path within the parent repository.
+Step 3: Update Submodule to Latest Commit
+
+Update Submodule: Use the following command to update the submodule to the latest commit on its origin repository.
+
+git submodule update --remote <submodule-path>
+
+Alternatively:
+
+If you prefer, you can navigate into the submodule directory and pull the changes directly.
+
+cd <submodule-path>
+git pull origin master  # or main, or any other branch name
+
+Step 4: Commit Changes in Parent Repository
+
+Stage Changes: After updating the submodule, stage the changes in the parent repository.
+
+git add <submodule-path>
+
+Commit Changes: Commit the submodule's updated reference to the parent repository.
+
+git commit -m "Update submodule to latest commit"
+
+Step 5: Push Changes to Origin (If Needed)
+
+Push Changes: If you're working in a shared repository and want to update the changes to the origin, push the changes.
+
+git push origin <branch-name>
+
+Updating Specific Submodules
+
+Sometimes, you might want to update only a specific submodule rather than all submodules. Here’s how you can do it:
+
+Step 1: Navigate to the Submodule Directory
+
+Change to the directory of the specific submodule you want to update.
+
+cd /path/to/your/main/repository/submodule_path
+
+Step 2: Fetch and Update
+
+Fetch the latest changes and update the submodule.
+
+git fetch origin
+git checkout origin/main
+
+Again, replace main with the branch you want to track.
+
+Step 3: Return to Main Repository
+
+Change back to the root directory of your main repository.
+
+cd /path/to/your/main/repository
+
+Step 4: Update Index
+
+Update the main repository to point to the new commit in the submodule.
+
+git add submodule_path
+git commit -m "Updated specific submodule to latest commit on origin"
+git push origin main
+
+Best Practices for Managing Submodules
+
+    Regular Updates: Regularly update your submodules to ensure you have the latest changes and bug fixes from their repositories.
+    Branch Tracking: Explicitly track branches for submodules to avoid unintended changes. This can be set in the .gitmodules file.
+    Clear Commit Messages: Use clear and descriptive commit messages when updating submodules, indicating what has changed and why.
+    Version Control: Consider version tagging for submodules to ensure stability and reproducibility of your project.
