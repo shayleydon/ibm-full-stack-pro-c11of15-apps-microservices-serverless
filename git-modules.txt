@@ -3,4 +3,4 @@ git submodule add git@github.com:shayleydon/pythonflaskserver-api-helloworld.git
 git submodule add git@github.com:shayleydon/c11m2l3-jmgdo-microservices.git
 git submodule add git@github.com:shayleydon/c11m5-finalproject-microservices-serverless.git
 
-git clone --recurse-submodules -j8 git@github.com:shayleydon/ibm-full-stack-pro-c11of15-apps-microservices-serverless-.git
+git clone --recurse-submodules -j8 git@github.com:shayleydon/ibm-full-stack-pro-c11of15-apps-microservices-serverless.git
