@@ -1,0 +1,4 @@
+git submodule add git@github.com:shayleydon/gentu-microservices_practiceProj.git
+git submodule add git@github.com:shayleydon/pythonflaskserver-api-helloworld.git
+git submodule add git@github.com:shayleydon/c11m2l3-jmgdo-microservices.git
+git submodule add git@github.com:shayleydon/c11m5-finalproject-microservices-serverless.git

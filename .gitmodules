@@ -1,0 +1,12 @@
+[submodule "gentu-microservices_practiceProj"]
+	path = gentu-microservices_practiceProj
+	url = git@github.com:shayleydon/gentu-microservices_practiceProj.git
+[submodule "pythonflaskserver-api-helloworld"]
+	path = pythonflaskserver-api-helloworld
+	url = git@github.com:shayleydon/pythonflaskserver-api-helloworld.git
+[submodule "c11m2l3-jmgdo-microservices"]
+	path = c11m2l3-jmgdo-microservices
+	url = git@github.com:shayleydon/c11m2l3-jmgdo-microservices.git
+[submodule "c11m5-finalproject-microservices-serverless"]
+	path = c11m5-finalproject-microservices-serverless
+	url = git@github.com:shayleydon/c11m5-finalproject-microservices-serverless.git
